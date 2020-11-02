@@ -1,0 +1,60 @@
+{{#if home}}
+    <div class="uk-form-stacked uk-margin-top">
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="title">Embed Title</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="title" type="text" placeholder="Title of the Embed">
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="author">Embed Author</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="author" type="text" placeholder="Author of embed: ex: QGV">
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="color">Embed Color</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="color" type="color" value="#191722">
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="url">Embed URL</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="url" type="url" placeholder="Enter a URL, ex: https://botlists.com/">
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="image">Embed Image</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="image" type="url" placeholder="Enter Image URL">
+            </div>
+        </div>
+
+        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+            <label><input class="uk-checkbox" type="checkbox" id="redirection" checked> redirect to url </label>
+        </div>
+        <progress class="uk-progress" id="progress" value="20" max="100"></progress>
+
+        <button class="uk-button uk-button-default" id="generate">GENERATE</button>
+    </div>
+    <div id="output" class="uk-margin-top">
+        <hr />
+        <div class="uk-margin">
+            <div class="uk-form-controls">
+                <label class="uk-form-label" for="outputValue">Generated URL</label>
+                <input class="uk-input" id="outputValue" type="text" value="">
+            </div>
+        </div>
+
+    </div>
+    <p style="text-align: center">made with 💛 by <a href="//github.com/sell">QGV</a> </p>
+    <script src="/js/home.js"></script>
+{{else}}
+    {{> _placeholder}}
+{{/if}}

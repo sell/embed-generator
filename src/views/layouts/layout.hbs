@@ -1,0 +1,23 @@
+<html lang="en">
+    <head>
+        <title>Discord Embed Generator</title>
+        {{> _meta}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+    <body>
+        {{> _nav}}
+    {{{body}}}
+        <div class="uk-container">
+            <div class="uk-margin-top" uk-alert>
+                <a class="uk-alert-close" uk-close></a>
+                <h3>Notice</h3>
+                <p>I am not responsible nor liable for anything, this service is meant for you to send custom discord embeds.</p>
+            </div>
+            {{> _form}}
+            {{> _advertisements}}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
+</html>

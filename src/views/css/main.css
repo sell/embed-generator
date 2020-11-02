@@ -1,0 +1,27 @@
+#output {
+    display: none;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #191722;
+}
+
+.uk-logo {
+    color: #FFF;
+}
+
+.uk-alert {
+    background: #191722;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+.uk-alert-close {
+    color: #FFFFFF;
+}
+
+#progress, .uk-progress {
+    color: #191722;
+}
+
+.uk-progress::-webkit-progress-value{background-color:#191722;transition:width .6s ease}.uk-progress::-moz-progress-bar{background-color:#191722}.uk-progress::-ms-fill{background-color:#191722;transition:width .6s ease;border:0}
