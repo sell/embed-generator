@@ -2,9 +2,11 @@ const fastify = require('fastify')({ logger: true })
 
 fastify.register(require('./plugin/routes'))
 
+const port = process.env.PORT || 3000
+
 const start = async () => {
   try {
-    await fastify.listen(3000)
+    await fastify.listen(port)
   } catch (e) {
     console.log(e)
     fastify.log.error(e)
