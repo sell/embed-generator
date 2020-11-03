@@ -10,6 +10,8 @@ const author = getElement('author');
 const redirection = getElement('redirection');
 const output = getElement('output');
 const outputValue = getElement('outputValue');
+const description = getElement('description');
+
 const items = document.querySelector('.uk-form-stacked');
 
 title.addEventListener('input', () => {
@@ -44,11 +46,11 @@ generate.addEventListener('click', () => {
         return;
     }
 
-    if (redirection.checked)  window.location = urlGenerator(url, image, title, color, author)
+    if (redirection.checked)  window.location = urlGenerator(url, image, title, color, author, description)
 
     else {
         output.style.display = 'block';
-        outputValue.value = window.location.protocol + '//' + window.location.hostname + urlGenerator(url, image, title, color, author);
+        outputValue.value = window.location.protocol + '//' + window.location.hostname + urlGenerator(url, image, title, color, author, description);
         outputValue.addEventListener('click', () => {
 
             outputValue.select();
@@ -62,7 +64,7 @@ generate.addEventListener('click', () => {
 
 const checker = (a, b) => b.value ? `${a}=${b.value}&` : ''
 
-const urlGenerator = (url, image, title, color, author) => {
+const urlGenerator = (url, image, title, color, author, description) => {
     const replaceColor = color.value ? 'color=' + color.value.replace('#', '%23') + '&' : '';
-    return `/${title.value}?${checker('url', url)}${checker('image', image)}${replaceColor}${checker('author', author)}`
+    return `/${title.value}?${checker('url', url)}${checker('image', image)}${replaceColor}${checker('author', author)}${checker('description', description)}`
 }
