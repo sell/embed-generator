@@ -26,7 +26,7 @@
     <meta property="og:url" content="https://botlists.com" />
     <meta property="og:title" content="{{title}}">
     <meta property="og:description" content="{{description}}">
-    <meta property="og:image" content="{{image}}">
+    {{#if image}}<meta property="og:image" content="{{image}}"> {{else}} <meta property="og:image" content="https://media.discordapp.net/attachments/764158238253776968/773004811926765568/download_1.png?width=677&height=677"> {{/if}}
 
 <!--    <meta name="theme-color" content='{{color}}'>-->
 <!--    <meta property="twitter:card" content="summary_large_image">-->
