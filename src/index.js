@@ -1,4 +1,9 @@
 const fastify = require('fastify')({ logger: true })
+const fastifyCaching = require('fastify-caching');
+
+fastify.register(fastifyCaching, {
+  privacy: fastifyCaching.privacy.NOCACHE
+}, (err) => { if (err) throw err });
 
 fastify.register(require('./plugin/routes'))
 
