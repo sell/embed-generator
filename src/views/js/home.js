@@ -62,9 +62,9 @@ generate.addEventListener('click', () => {
 
 });
 
-const checker = (a, b) => b.value ? `${a}=${b.value}&` : ''
+const checker = (a, b) => b.value ? `${a}=${b.value.replace(/ /g, '+')}&` : ''
 
 const urlGenerator = (url, image, title, color, author, description) => {
     const replaceColor = color.value ? 'color=' + color.value.replace('#', '%23') + '&' : '';
-    return `/${title.value}?${checker('url', url)}${checker('image', image)}${replaceColor}${checker('author', author)}${checker('description', description)}`
+    return `/${title.value.replace(/ /g, '+')}?${checker('url', url)}${checker('image', image)}${replaceColor}${checker('author', author)}${checker('description', description)}`
 }
