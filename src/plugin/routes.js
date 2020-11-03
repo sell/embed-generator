@@ -25,6 +25,10 @@ const routes = (fastify, options, done) => {
     rep.view('./src/views/index.hbs', { text: 'text', home: true})
   });
 
+  fastify.get('/oembed', (req, rep) => {
+    return { type: "photo", "author_name": req.query.a}
+  });
+
   fastify.get('/:title', (req, rep) => {
     const replacePlus = (a) => a ? a.replace(/[+]/g, ' ') : a
     let { description, url, image, color } = req.query;

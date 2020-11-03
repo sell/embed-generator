@@ -15,14 +15,14 @@
     <meta property="twitter:title" content="Discord Embed Generator">
     <meta property="twitter:description" content="generate a custom discord embed">
 {{else}}
-    <meta property="og:title" content="{{title}}"
+    <meta property="og:title" content="{{title}}">
     <meta property="og:description" content="{{description}}">
-    <meta property="og:type" content="website">
+    <link type="application/json+oembed" href="https://e.dbos.me/oembed?a={{author}}" />
     {{#if image}}<meta property="og:image" content="{{image}}">{{/if}}
     <meta property="og:url" content="https://e.dbos.me" />
     {{#if url}}<meta http-equiv="refresh" content="0.0;url={{url}}">{{/if}}
 
-    <meta name="theme-color" content='{{#if color}}{{color}} {{else}} #fefefe {{/if}}'>
+    <meta name="theme-color" content='{{color}}'>
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{url}}">
     <meta property="twitter:title" content="{{title}}">
