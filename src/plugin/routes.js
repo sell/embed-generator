@@ -26,7 +26,7 @@ const routes = (fastify, options, done) => {
   });
 
   fastify.get('/oembed', (req, rep) => {
-    return { type: "photo", "author_name": "unknown"}
+    return { type: "photo", "author_name": ""}
   });
 
   fastify.get('/:title', (req, rep) => {
