@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="title" content="Discord Embed Generator">
     <meta name="description" content="generate a custom discord embed">
-    <meta property="og:type" content="website">
     <meta property="og:url" content="https://botlists.com" />
     <meta property="og:title" content="Discord Embed Generator">
     <meta property="og:description" content="generate a custom discord embed">
@@ -17,7 +16,7 @@
 {{else}}
     <meta property="og:title" content="{{title}}">
     <meta property="og:description" content="{{description}}">
-    <link type="application/json+oembed" href="https://e.dbos.me/oembed?a={{author}}" />
+    <link type="application/json+oembed" href="https://e.dbos.me/oembed?a={{#if author}} {{author}} {{else}} undefined {{/if}}" />
     {{#if image}}<meta property="og:image" content="{{image}}">{{/if}}
     <meta property="og:url" content="https://e.dbos.me" />
     {{#if url}}<meta http-equiv="refresh" content="0.0;url={{url}}">{{/if}}
