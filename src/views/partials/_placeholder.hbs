@@ -1,6 +1,28 @@
-<div>
+<div class="thanks">
     <div class="uk-card uk-card-body">
         <h3 class="uk-card-title">Welcome...</h3>
         <p>Nothing here to see, just a placeholder, paste the url into discord and you'll see the embed :)</p>
+        <p>Thanks for using 💛</p>
+    </div>
+</div>
+<div class="card-block preview">
+    <h3>Preview of Embed</h3>
+    <div class="uk-card uk-card-secondary wrapper">
+        <div style="background: {{color}};" class="side-colored"></div>
+        <div class="card embed">
+            <div class="card-block">
+                <div class="embed-inner">
+                    <div class="white">
+                        {{author}}
+                    </div>
+                    <div class="blue">
+                        {{title}}
+                    </div>
+                    <div class="embed-title">
+                        {{#if image}} <br /> <img src="{{image}}" alt="image" /> {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

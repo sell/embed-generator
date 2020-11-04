@@ -25,3 +25,85 @@
 }
 
 .uk-progress::-webkit-progress-value{background-color:#191722;transition:width .6s ease}.uk-progress::-moz-progress-bar{background-color:#191722}.uk-progress::-ms-fill{background-color:#191722;transition:width .6s ease;border:0}
+
+
+.thanks {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.thanks .uk-card {
+    margin: 20px 0;
+}
+
+.thanks .uk-card-body {
+    padding: 0;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: flex;
+    max-width: 520px;
+    max-height: 500px;
+    min-height: 50px;
+    padding: 25px;
+    margin: 0;
+}
+
+.embed {
+
+    border-radius: 0 3px 3px 0;
+    background: #2f3136;
+    border-color: #2f3136;
+    display: -webkit-box;
+    display: flex;
+    padding: 8px 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+
+}
+
+.embed .card-block {
+
+    padding: 0;
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.uk-card {
+    border-radius: 5px;
+}
+
+.uk-card-secondary {
+    background: #191722;
+}
+
+.side-colored {
+    min-height: inherit;
+    width: 4px;
+    min-width: 4px;
+    border-radius: 3px 0 0 3px;
+    background: #4f545c;
+}
+
+.blue {
+    margin-top: 5px;
+    color: #00b0f4;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.white {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #FFFFFF !important;
+}

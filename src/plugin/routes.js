@@ -31,9 +31,19 @@ const routes = (fastify, options, done) => {
 
   fastify.get('/:title', (req, rep) => {
     const replacePlus = (a) => a ? a.replace(/[+]/g, ' ') : a
-    let { description, url, image, color } = req.query;
+    let { description, url, image, color, author } = req.query;
     let { title } = req.params;
-    rep.view('./src/views/index.hbs', { title: replacePlus(title), description: replacePlus(description), url: replacePlus(url), image: replacePlus(image), color: replacePlus(color), home: false})
+    rep.view('./src/views/index.hbs', {
+      title: replacePlus(title),
+      author: replacePlus(author),
+      description: replacePlus(description),
+      url: replacePlus(url),
+      image: replacePlus(image),
+      color: replacePlus(color ?
+          color.startsWith('#') ? color : `#${color}`
+          : '#191722'),
+      home: false
+    })
   });
 
   fastify.setNotFoundHandler((req, rep) => {
