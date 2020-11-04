@@ -1,6 +1,17 @@
 const fastify = require('fastify')({ logger: true })
 const fastifyCaching = require('fastify-caching');
 
+fastify.register(require('fastify-rate-limit'), {
+  max: 100,
+  timeWindow: 600000,
+  addHeaders: {
+    'x-ratelimit-limit': true,
+    'x-ratelimit-remaining': true,
+    'x-ratelimit-reset': true,
+    'retry-after': true
+  }
+});
+
 fastify.register(fastifyCaching, {
   privacy: fastifyCaching.privacy.NOCACHE
 }, (err) => { if (err) throw err });
